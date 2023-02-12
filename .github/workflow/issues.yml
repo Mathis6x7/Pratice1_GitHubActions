@@ -1,0 +1,11 @@
+name: issues
+on:
+  issues:
+    types: [opened, edited, deleted, closed]
+jobs:
+  Lint-Test-and-Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show event data
+      run: echo "${{ toJSON(github)) }}"
+
