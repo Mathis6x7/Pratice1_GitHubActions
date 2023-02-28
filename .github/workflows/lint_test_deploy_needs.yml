@@ -1,0 +1,20 @@
+name: Build, Lint, Test and Deploy Dev
+on: [workflow_dispatch, push]
+jobs:
+  Lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install python
+        run: echo "bullshit..."
+  Deploy-code:
+    runs-on: ubuntu-latest
+    needs: Lint-and-test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install python
+        run: echo "bullshit v2..."
+
+
